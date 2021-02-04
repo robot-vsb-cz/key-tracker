@@ -1,0 +1,24 @@
+C:\Users\Admin\source\repos\TestKey\TestKey\bin\Debug\TestKey.exe.config
+C:\Users\Admin\source\repos\TestKey\TestKey\bin\Debug\TestKey.exe
+C:\Users\Admin\source\repos\TestKey\TestKey\bin\Debug\TestKey.pdb
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.Form1.resources
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.Properties.Resources.resources
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.exe
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.pdb
+C:\Users\Admin\source\repos\TestKey\TestKey\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\Admin\source\repos\TestKey\TestKey\obj\Debug\TestKey.csproj.CopyComplete
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\bin\Debug\TestKey.exe.config
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\bin\Debug\TestKey.exe
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\bin\Debug\TestKey.pdb
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.Form1.resources
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.Properties.Resources.resources
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.csproj.CopyComplete
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.exe
+C:\Users\Admin\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.pdb
