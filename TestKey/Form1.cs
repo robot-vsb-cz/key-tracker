@@ -125,7 +125,7 @@ namespace TestKey
                 }
 
                 buttons[i].Text = text;
-                buttons[i].BackColor = Color.Green;
+                buttons[i].BackColor = Color.LightGreen;
             }
 
 
@@ -140,7 +140,7 @@ namespace TestKey
 
                 buttons[i].Width = width;
                 buttons[i].Location = new Point(width * i);
-                buttons[i].Font = new Font(buttons[i].Font.FontFamily, this.Height / 10, FontStyle.Bold);
+                buttons[i].Font = new Font(buttons[i].Font.FontFamily, this.Height / 8, FontStyle.Bold);
             }
             pictureBox1.Width = width - 20;
             pictureBox1.Location = new Point(width * 3);
