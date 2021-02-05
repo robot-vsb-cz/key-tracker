@@ -34,3 +34,15 @@ C:\Users\petro\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.
 C:\Users\petro\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.csproj.CopyComplete
 C:\Users\petro\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.exe
 C:\Users\petro\OneDrive - VSB-TUO\projekty\SW\TestKey\TestKey\obj\Debug\TestKey.pdb
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\bin\Debug\TestKey.exe.config
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\bin\Debug\TestKey.exe
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\bin\Debug\TestKey.pdb
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.Form1.resources
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.Properties.Resources.resources
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CopyComplete
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.exe
+C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.pdb

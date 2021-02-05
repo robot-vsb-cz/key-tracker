@@ -24,6 +24,7 @@ namespace TestKey
             buttons.Add(button2);
             buttons.Add(button3);
 
+
             this.TopMost = true;
 
             HookInputs test = new HookInputs();
@@ -86,6 +87,7 @@ namespace TestKey
                 btn.Text = "";
                 btn.BackColor = Color.White;
             }
+
             int length = inputs.Count;
             if (length > 3)
                 length = 3;
@@ -125,10 +127,8 @@ namespace TestKey
                 }
 
                 buttons[i].Text = text;
-                buttons[i].BackColor = Color.LightGreen;
+                buttons[i].BackColor = Color.LightGray;
             }
-
-
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -136,11 +136,10 @@ namespace TestKey
             int width = this.Width / 4;
             for (int i = 0; i < 3; i++)
             {
-
-
                 buttons[i].Width = width;
                 buttons[i].Location = new Point(width * i);
                 buttons[i].Font = new Font(buttons[i].Font.FontFamily, this.Height / 8, FontStyle.Bold);
+
             }
             pictureBox1.Width = width - 20;
             pictureBox1.Location = new Point(width * 3);
