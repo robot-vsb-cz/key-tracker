@@ -46,3 +46,15 @@ C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CoreCom
 C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CopyComplete
 C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.exe
 C:\Users\Admin\Documents\SW\key-tracker\TestKey\obj\Debug\TestKey.pdb
+D:\Dokumenty\SW\key-tracker\TestKey\bin\Debug\TestKey.exe.config
+D:\Dokumenty\SW\key-tracker\TestKey\bin\Debug\TestKey.exe
+D:\Dokumenty\SW\key-tracker\TestKey\bin\Debug\TestKey.pdb
+D:\Dokumenty\SW\key-tracker\TestKey\bin\Debug\Gma.System.MouseKeyHook.dll
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.csprojAssemblyReference.cache
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.Form1.resources
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.Properties.Resources.resources
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.GenerateResource.cache
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CoreCompileInputs.cache
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.csproj.CopyComplete
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.exe
+D:\Dokumenty\SW\key-tracker\TestKey\obj\Debug\TestKey.pdb

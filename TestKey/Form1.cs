@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -15,10 +16,13 @@ namespace TestKey
     {
 
         List<Button> buttons = new List<Button>();
-
+        bool mouseMiddle = false;
+        bool mouseRight = false;
+        bool mouseLeft = false;
         public Form1()
         {
             InitializeComponent();
+            pictureMouse.Paint += PictureBox1_Paint;
 
             buttons.Add(button1);
             buttons.Add(button2);
@@ -36,48 +40,79 @@ namespace TestKey
 
         }
 
+        private void PictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            int radius1 = (int)(0.2f * Math.Min(pictureMouse.Width, pictureMouse.Height)); // poloměr zaoblení nahoře, nedávat větší než 0.33
+            int radius2 = (int)(0.4f * Math.Min(pictureMouse.Width, pictureMouse.Height)); // poloměr zaoblení dole
+            int buttonHeight = (int)(0.4f * pictureMouse.Height); // výška tlačítek
+            int offset = 2;
+            Pen penBlack = new Pen(Color.Black, 2);              // 2 je tloušťka čáry
+            Brush brushButton = new SolidBrush(Color.RoyalBlue); // barva stiskutého tlačítka
+
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+
+
+            // Obrys myši:
+            GraphicsPath pathMouse = new GraphicsPath();
+
+            Rectangle arcRect1 = new Rectangle(offset, offset, radius1 * 2, radius1 * 2);
+            pathMouse.AddArc(arcRect1, 180, 90); // levý horní
+
+            arcRect1.X = pictureMouse.Width - radius1 * 2 - offset;
+            pathMouse.AddArc(arcRect1, 270, 90); // pravý horní
+
+            Rectangle arcRect2 = new Rectangle(pictureMouse.Width - radius2 * 2 - offset, pictureMouse.Height - radius2 * 2 - offset, radius2 * 2, radius2 * 2);
+            pathMouse.AddArc(arcRect2, 0, 90); // pravý dolní
+
+            arcRect2.X = offset;
+            pathMouse.AddArc(arcRect2, 90, 90); // levý dolní
+
+            pathMouse.CloseFigure();
+            g.DrawPath(penBlack, pathMouse);
+
+            // Prostřední tlačítko:
+            GraphicsPath pathM = new GraphicsPath();
+            pathM.AddLine(new Point((int)(pictureMouse.Width * 0.35), offset), new Point((int)(pictureMouse.Width * 0.65), offset));
+            pathM.AddLine(new Point((int)(pictureMouse.Width * 0.65), buttonHeight), new Point((int)(pictureMouse.Width * 0.35), buttonHeight));
+            if (mouseMiddle)
+                g.FillPath(brushButton, pathM);
+            g.DrawPath(penBlack, pathM);
+
+            // Pravé tlačítko:
+            GraphicsPath pathR = new GraphicsPath();
+
+            pathR.AddArc(arcRect1, 270, 90);
+            pathR.AddLine(new Point(pictureMouse.Width - offset, buttonHeight), new Point((int)(pictureMouse.Width * 0.65), buttonHeight));
+            pathR.AddLine(pathR.GetLastPoint(), new Point((int)(pictureMouse.Width * 0.65), offset));
+            pathR.CloseFigure();
+            if (mouseRight)
+                g.FillPath(brushButton, pathR);
+            g.DrawPath(penBlack, pathR);
+
+            // Levé tlačítko:
+            GraphicsPath pathL = new GraphicsPath();
+
+            arcRect1.X = offset;
+            pathL.AddArc(arcRect1, -90, -90);
+            pathL.AddLine(new Point(offset, buttonHeight), new Point((int)(pictureMouse.Width * 0.35), buttonHeight));
+            pathL.AddLine(pathL.GetLastPoint(), new Point((int)(pictureMouse.Width * 0.35), offset));
+            pathL.CloseFigure();
+            if (mouseLeft)
+                g.FillPath(brushButton, pathL);
+            g.DrawPath(penBlack, pathL);
+
+
+
+        }
 
         bool mouseclick = false;
         private void Test_onMouseInput(List<ActiveInput> inputs)
         {
-            mouseclick = !mouseclick;
-            PrintMouse(Color.White, "");
-            PrintMouse(Color.White, "Right");
-            PrintMouse(Color.White, "Middle");
-            for (int i = 0; i < inputs.Count; i++)
-                PrintMouse(Color.Green, inputs[i].Name);
-
-        }
-
-        public void PrintMouse(Color color, string btn)
-        {
-            Pen p = new Pen(Color.Black, -1);
-            int h = pictureBox1.Height / 3;
-            int button = 0;
-            int offset = (int)(pictureBox1.Width / 3);
-            if (btn == "Right")
-            {
-                button = 2;
-            }
-            if (btn == "Middle")
-            {
-                button = 1;
-            }
-
-            int wpul = (int)(pictureBox1.Width / 2);
-
-            SolidBrush blueBrush = new SolidBrush(color);
-            using(Graphics g = pictureBox1.CreateGraphics())
-            {
-
-                g.FillRectangle(blueBrush, offset * button, 0, offset, h);
-
-                for (int i = 0; i < 3; i++)
-                {
-                    g.DrawRectangle(p, offset * i, 0, offset, h);
-                }
-                g.DrawRectangle(p, 0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
-            }
+            mouseMiddle = inputs.Exists(x => x.Name == "Middle");
+            mouseRight = inputs.Exists(x => x.Name == "Right");
+            mouseLeft = inputs.Exists(x => x.Name == "Left");
+            pictureMouse.Invalidate();
         }
 
         private void Test_onChangeInput(List<ActiveInput> inputs)
@@ -98,7 +133,7 @@ namespace TestKey
                 switch (inputs[i].Name)
                 {
                     case "LControlKey":
-                        text = "L CTRL";
+                        text = "CTRL";
                         break;
                     case "LMenu":
                         text = "L ALT";
@@ -107,7 +142,7 @@ namespace TestKey
                         text = "L SHIFT";
                         break;
                     case "RControlKey":
-                        text = "R CTRL";
+                        text = "CTRL";
                         break;
                     case "RMenu":
                         text = "R ALT";
@@ -133,7 +168,7 @@ namespace TestKey
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            int width = this.Width / 4;
+            int width = (int)(this.Width * 0.8)/3;
             for (int i = 0; i < 3; i++)
             {
                 buttons[i].Width = width;
@@ -141,10 +176,10 @@ namespace TestKey
                 buttons[i].Font = new Font(buttons[i].Font.FontFamily, this.Height / 8, FontStyle.Bold);
 
             }
-            pictureBox1.Width = width - 20;
-            pictureBox1.Location = new Point(width * 3);
-            pictureBox1.Image = null;
-            pictureBox1.Invalidate();
+            pictureMouse.Width = (int)(this.Width*0.2)-20;
+            pictureMouse.Location = new Point(width * 3);
+            pictureMouse.Image = null;
+            pictureMouse.Invalidate();
         }
     }
 }
